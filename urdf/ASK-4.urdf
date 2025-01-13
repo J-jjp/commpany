@@ -3,22 +3,22 @@
      Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
      For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
 <robot
-  name="ASK-4">
+  name="ASK-4-2">
   <link
     name="base_link">
     <inertial>
       <origin
-        xyz="0.00931408435311892 -0.00421993959569004 0.00139568614526787"
+        xyz="0.00992946630597228 -0.00266992153503952 0.00139568704685267"
         rpy="0 0 0" />
       <mass
-        value="5.1396761 " />
+        value="5.13967166144139" />
       <inertia
-        ixx="0.1187518"
-        ixy="-0.0000016"
-        ixz="0.0000118"
-        iyy="0.1293308"
-        iyz="0.0017850"
-        izz="0.0286350" />
+        ixx="0.0198344939840438"
+        ixy="3.68855478958646E-05"
+        ixz="-7.51002546313216E-05"
+        iyy="0.0149462084052446"
+        iyz="7.1656902141161E-05"
+        izz="0.0263773506649489" />
     </inertial>
     <visual>
       <origin
@@ -26,7 +26,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://ASK-4/meshes/base_link.STL" />
+          filename="package://ASK-4-2/meshes/base_link.STL" />
       </geometry>
       <material
         name="">
@@ -40,7 +40,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://ASK-4/meshes/base_link.STL" />
+          filename="package://ASK-4-2/meshes/base_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -48,17 +48,17 @@
     name="FL_hip_link">
     <inertial>
       <origin
-        xyz="-0.0106503729938416 -0.00105647862258929 7.49308241200508E-06"
+        xyz="-0.0106503457914954 -0.00105646187245095 7.50117564338182E-06"
         rpy="0 0 0" />
       <mass
-        value="0.3376556 " />
+        value="0.337654873921649" />
       <inertia
-        ixx="0.0004960"
-        ixy="0.0000441"
-        ixz="-0.0000014"
-        iyy=" 0.0002952"
-        iyz="-0.0000004"
-        izz="0.0003363" />
+        ixx="0.000335612172323751"
+        ixy="5.09865169622586E-06"
+        ixz="3.45125064354634E-07"
+        iyy="0.000441865005655587"
+        iyz="2.04731987900165E-07"
+        izz="0.000221802646140033" />
     </inertial>
     <visual>
       <origin
@@ -66,7 +66,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://ASK-4/meshes/FL_hip_link.STL" />
+          filename="package://ASK-4-2/meshes/FL_hip_link.STL" />
       </geometry>
       <material
         name="">
@@ -80,7 +80,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://ASK-4/meshes/FL_hip_link.STL" />
+          filename="package://ASK-4-2/meshes/FL_hip_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -89,7 +89,7 @@
     type="revolute">
     <origin
       xyz="0.209 0.0575 0"
-      rpy="-0.20776 0 0" />
+      rpy="0 0 0" />
     <parent
       link="base_link" />
     <child
@@ -106,17 +106,17 @@
     name="FL_thigh_link">
     <inertial>
       <origin
-        xyz="-0.0260473430871352 -0.0232842320121252 -0.0161559663171794"
+        xyz="-0.0270791915707163 0.0232842260903137 0.00998167182790227"
         rpy="0 0 0" />
       <mass
-        value=" 0.9885170" />
+        value="0.98851736736006" />
       <inertia
-        ixx=" 0.0053961"
-        ixy="0.0001421"
-        ixz="-0.0000682"
-        iyy="0.0013395"
-        iyz="0.0009328"
-        izz="0.0051612" />
+        ixx="0.000985290178508422"
+        ixy="1.98334149377828E-06"
+        ixz="0.000721371260822831"
+        iyy="0.00302059797548232"
+        iyz="-1.13819293612705E-06"
+        izz="0.00223151745206596" />
     </inertial>
     <visual>
       <origin
@@ -124,7 +124,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://ASK-4/meshes/FL_thigh_link.STL" />
+          filename="package://ASK-4-2/meshes/FL_thigh_link.STL" />
       </geometry>
       <material
         name="">
@@ -138,7 +138,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://ASK-4/meshes/FL_thigh_link.STL" />
+          filename="package://ASK-4-2/meshes/FL_thigh_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -147,13 +147,13 @@
     type="revolute">
     <origin
       xyz="0 0.0975 0"
-      rpy="0 -0.77573 0" />
+      rpy="-3.1416 -1.1642 0" />
     <parent
       link="FL_hip_link" />
     <child
       link="FL_thigh_link" />
     <axis
-      xyz="0 1 0" />
+      xyz="0 -1 0" />
     <limit
       lower="-3.14"
       upper="3.14"
@@ -164,17 +164,17 @@
     name="FL_calf_link">
     <inertial>
       <origin
-        xyz="0.00369870880001291 -1.92467402951313E-06 -0.10447291774495"
+        xyz="0.00461061452147499 1.80400082966381E-06 -0.0850112960048441"
         rpy="0 0 0" />
       <mass
-        value="0.2303901" />
+        value="0.196508884495562" />
       <inertia
-        ixx=" 0.0018844"
-        ixy="0.0002823"
-        ixz="-0.0001694"
-        iyy=" 0.0006049"
-        iyz="0.0008035"
-        izz=" 0.0014162" />
+        ixx="0.00139217885927767"
+        ixy="-2.06452748568991E-09"
+        ixz="0.000125545815699014"
+        iyy="0.00143103513567007"
+        iyz="4.12063854273975E-08"
+        izz="4.9915681616853E-05" />
     </inertial>
     <visual>
       <origin
@@ -182,12 +182,12 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://ASK-4/meshes/FL_calf_link.STL" />
+          filename="package://ASK-4-2/meshes/FL_calf_link.STL" />
       </geometry>
       <material
         name="">
         <color
-          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
       </material>
     </visual>
     <collision>
@@ -196,7 +196,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://ASK-4/meshes/FL_calf_link.STL" />
+          filename="package://ASK-4-2/meshes/FL_calf_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -204,8 +204,8 @@
     name="FL_calf_joint"
     type="revolute">
     <origin
-      xyz="-0.17504 -0.001 -0.11602"
-      rpy="3.1416 -1.3726 -3.1416" />
+      xyz="-0.19288 0.001 0.083055"
+      rpy="-3.1416 -1.1642 0" />
     <parent
       link="FL_thigh_link" />
     <child
@@ -219,20 +219,20 @@
       velocity="100" />
   </joint>
   <link
-    name="FR_hip_link">
+    name="FL_foot_link">
     <inertial>
       <origin
-        xyz="-0.0106669700849433 0.00105653848482424 -8.09701234301755E-06"
+        xyz="-0.00175459486820176 0 -0.00179543551506522"
         rpy="0 0 0" />
       <mass
-        value=" 0.3376577 " />
+        value="0.0332506166455944" />
       <inertia
-        ixx=" 0.0005038"
-        ixy=" 0.0000175"
-        ixz=" 0.0000016"
-        iyy=" 0.0002871"
-        iyz=" 0.0000000"
-        izz=" 0.0003364" />
+        ixx="5.82412671981776E-06"
+        ixy="6.40470714281943E-22"
+        ixz="6.37425175827703E-07"
+        iyy="5.20120101015828E-06"
+        iyz="-1.55308179837147E-22"
+        izz="5.85346314748617E-06" />
     </inertial>
     <visual>
       <origin
@@ -240,7 +240,60 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://ASK-4/meshes/FR_hip_link.STL" />
+          filename="package://ASK-4-2/meshes/FL_foot_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ASK-4-2/meshes/FL_foot_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FL_foot_joint"
+    type="fixed">
+    <origin
+      xyz="0 0 -0.21577"
+      rpy="0 0 0" />
+    <parent
+      link="FL_calf_link" />
+    <child
+      link="FL_foot_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="FR_hip_link">
+    <inertial>
+      <origin
+        xyz="-0.0106669389296382 0.00105654727697249 -8.09717352479034E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.337657104489193" />
+      <inertia
+        ixx="0.000335667809975768"
+        ixy="-5.0083024033389E-06"
+        ixz="3.524803103757E-07"
+        iyy="0.000441866858701043"
+        iyz="-1.15542052465366E-07"
+        izz="0.000221750529456321" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ASK-4-2/meshes/FR_hip_link.STL" />
       </geometry>
       <material
         name="">
@@ -254,7 +307,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://ASK-4/meshes/FR_hip_link.STL" />
+          filename="package://ASK-4-2/meshes/FR_hip_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -263,7 +316,7 @@
     type="revolute">
     <origin
       xyz="0.209 -0.0575 0"
-      rpy="-0.079471 0 0" />
+      rpy="0 0 0" />
     <parent
       link="base_link" />
     <child
@@ -280,17 +333,17 @@
     name="FR_thigh_link">
     <inertial>
       <origin
-        xyz="0.000658719198303109 -0.0233673928952929 -0.0314127304105616"
+        xyz="0.000547030998780867 -0.023402103641135 -0.027687273549384"
         rpy="0 0 0" />
       <mass
-        value="0.9817966" />
+        value="0.981796539065317" />
       <inertia
-        ixx="0.0052097"
-        ixy="0.0001600"
-        ixz="-0.0007234"
-        iyy="0.0051972"
-        iyz="0.0007023"
-        izz="0.0013960" />
+        ixx="0.00253399649841049"
+        ixy="-7.20202567728191E-08"
+        ixz="2.12505564364233E-05"
+        iyy="0.00298771577286488"
+        iyz="-4.13998861307807E-06"
+        izz="0.000649782764080876" />
     </inertial>
     <visual>
       <origin
@@ -298,7 +351,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://ASK-4/meshes/FR_thigh_link.STL" />
+          filename="package://ASK-4-2/meshes/FR_thigh_link.STL" />
       </geometry>
       <material
         name="">
@@ -312,7 +365,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://ASK-4/meshes/FR_thigh_link.STL" />
+          filename="package://ASK-4-2/meshes/FR_thigh_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -320,8 +373,8 @@
     name="FR_thigh_joint"
     type="revolute">
     <origin
-      xyz="0 -0.0975 0"
-      rpy="0 -1.3591 3.1416" />
+      xyz="0 -0.10672 0"
+      rpy="0 0 3.1416" />
     <parent
       link="FR_hip_link" />
     <child
@@ -338,17 +391,17 @@
     name="FR_calf_link">
     <inertial>
       <origin
-        xyz="0.00369862925220247 1.63091428181938E-06 -0.104467827335118"
+        xyz="0.00461061452147515 1.80400082958054E-06 -0.085011296004845"
         rpy="0 0 0" />
       <mass
-        value="0.2303901" />
+        value="0.196508884495563" />
       <inertia
-        ixx=" 0.0019436"
-        ixy="0.0000048"
-        ixz=" 0.0000175"
-        iyy="0.0018838"
-        iyz="-0.0002207"
-        izz="0.0000780" />
+        ixx="0.00139217885927768"
+        ixy="-2.06452748628858E-09"
+        ixz="0.000125545815699014"
+        iyy="0.00143103513567007"
+        iyz="4.12063854274795E-08"
+        izz="4.9915681616835E-05" />
     </inertial>
     <visual>
       <origin
@@ -356,12 +409,12 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://ASK-4/meshes/FR_calf_link.STL" />
+          filename="package://ASK-4-2/meshes/FR_calf_link.STL" />
       </geometry>
       <material
         name="">
         <color
-          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
       </material>
     </visual>
     <collision>
@@ -370,7 +423,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://ASK-4/meshes/FR_calf_link.STL" />
+          filename="package://ASK-4-2/meshes/FR_calf_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -379,7 +432,7 @@
     type="revolute">
     <origin
       xyz="0 -0.001 -0.21"
-      rpy="3.1416 -0.38712 0" />
+      rpy="0 0 -3.1416" />
     <parent
       link="FR_thigh_link" />
     <child
@@ -393,20 +446,20 @@
       velocity="100" />
   </joint>
   <link
-    name="RL_hip_link">
+    name="FR_foot_link">
     <inertial>
       <origin
-        xyz="0.0106503732805925 -0.00105647843285732 -7.49361339076951E-06"
+        xyz="-0.00175459486820179 2.77555756156289E-17 -0.00182803153806099"
         rpy="0 0 0" />
       <mass
-        value=" 0.3376556" />
+        value="0.0332506166455944" />
       <inertia
-        ixx="0.0004963"
-        ixy="- 0.0000435"
-        ixz="0.0000014"
-        iyy=" 0.0002949"
-        iyz="-0.0000004"
-        izz=" 0.0003363" />
+        ixx="5.82412671981776E-06"
+        ixy="1.61311277559526E-22"
+        ixz="6.37425175827703E-07"
+        iyy="5.20120101015828E-06"
+        iyz="7.53908238435924E-22"
+        izz="5.85346314748616E-06" />
     </inertial>
     <visual>
       <origin
@@ -414,7 +467,60 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://ASK-4/meshes/RL_hip_link.STL" />
+          filename="package://ASK-4-2/meshes/FR_foot_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ASK-4-2/meshes/FR_foot_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FR_foot_joint"
+    type="fixed">
+    <origin
+      xyz="0 0 -0.21574"
+      rpy="0 0 0" />
+    <parent
+      link="FR_calf_link" />
+    <child
+      link="FR_foot_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="RL_hip_link">
+    <inertial>
+      <origin
+        xyz="0.0106503460334455 -0.00105646148572416 -7.50181891534529E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.33765486830875" />
+      <inertia
+        ixx="0.000335612160621357"
+        ixy="-5.09864760893829E-06"
+        ixz="3.45117707490452E-07"
+        iyy="0.000441864990334726"
+        iyz="-2.04736902744738E-07"
+        izz="0.00022180263729175" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ASK-4-2/meshes/RL_hip_link.STL" />
       </geometry>
       <material
         name="">
@@ -428,7 +534,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://ASK-4/meshes/RL_hip_link.STL" />
+          filename="package://ASK-4-2/meshes/RL_hip_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -437,7 +543,7 @@
     type="revolute">
     <origin
       xyz="-0.212 0.0575 0"
-      rpy="0.20476 0 0" />
+      rpy="0 0 0" />
     <parent
       link="base_link" />
     <child
@@ -454,17 +560,17 @@
     name="RL_thigh_link">
     <inertial>
       <origin
-        xyz="0.00615249652182256 -0.0232833521610032 -0.0293497847307627"
+        xyz="0.00040822764833115 0.0232833165047042 -0.0284358552532086"
         rpy="0 0 0" />
       <mass
-        value="0.9885474 " />
+        value="0.988547565628563" />
       <inertia
-        ixx="0.0049310"
-        ixy="-0.0012263"
-        ixz="0.0006489"
-        iyy="0.0025436"
-        iyz="0.0016084"
-        izz="0.0045017" />
+        ixx="0.00255264500112588"
+        ixy="-9.86657315843123E-07"
+        ixz="9.82930312945563E-05"
+        iyy="0.00302059853537962"
+        iyz="2.68895979718321E-06"
+        izz="0.000664162957356032" />
     </inertial>
     <visual>
       <origin
@@ -472,7 +578,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://ASK-4/meshes/RL_thigh_link.STL" />
+          filename="package://ASK-4-2/meshes/RL_thigh_link.STL" />
       </geometry>
       <material
         name="">
@@ -486,7 +592,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://ASK-4/meshes/RL_thigh_link.STL" />
+          filename="package://ASK-4-2/meshes/RL_thigh_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -495,13 +601,13 @@
     type="revolute">
     <origin
       xyz="0 0.0975 0"
-      rpy="0 0.68055 0" />
+      rpy="0 0.039339 3.1416" />
     <parent
       link="RL_hip_link" />
     <child
       link="RL_thigh_link" />
     <axis
-      xyz="0 1 0" />
+      xyz="0 -1 0" />
     <limit
       lower="0"
       upper="0"
@@ -512,17 +618,17 @@
     name="RL_calf_link">
     <inertial>
       <origin
-        xyz="-0.0554319688583246 -0.157296702188149 -0.347458975199476"
+        xyz="0.00461061452147504 1.80400082946952E-06 -0.0850112960048451"
         rpy="0 0 0" />
       <mass
-        value="0.2303901" />
+        value="0.196508884495564" />
       <inertia
-        ixx=" 0.0019043"
-        ixy="-0.0001909"
-        ixz="0.0001890"
-        iyy="0.0010246"
-        iyz="0.0009100"
-        izz="0.0009766" />
+        ixx="0.00139217885927768"
+        ixy="-2.06452748671305E-09"
+        ixz="0.000125545815699013"
+        iyy="0.00143103513567009"
+        iyz="4.12063854261163E-08"
+        izz="4.99156816168485E-05" />
     </inertial>
     <visual>
       <origin
@@ -530,12 +636,12 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://ASK-4/meshes/RL_calf_link.STL" />
+          filename="package://ASK-4-2/meshes/RL_calf_link.STL" />
       </geometry>
       <material
         name="">
         <color
-          rgba="1 1 1 1" />
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
       </material>
     </visual>
     <collision>
@@ -544,7 +650,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://ASK-4/meshes/RL_calf_link.STL" />
+          filename="package://ASK-4-2/meshes/RL_calf_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -552,8 +658,8 @@
     name="RL_calf_joint"
     type="revolute">
     <origin
-      xyz="0.046814 -0.001 -0.20472"
-      rpy="-3.1416 -0.16231 3.1416" />
+      xyz="0.0082591 0.001 -0.20984"
+      rpy="0 0.039339 3.1416" />
     <parent
       link="RL_thigh_link" />
     <child
@@ -567,20 +673,20 @@
       velocity="0" />
   </joint>
   <link
-    name="RR_hip_link">
+    name="RL_foot_link">
     <inertial>
       <origin
-        xyz="0.0106669389398631 0.00105654728836693 8.09715590597421E-06"
+        xyz="-0.0017545948682017 0 -0.00179543551506522"
         rpy="0 0 0" />
       <mass
-        value=" 0.3376577 " />
+        value="0.0332506166455944" />
       <inertia
-        ixx="0.0005052"
-        ixy="-0.0000001"
-        ixz="-0.0000016"
-        iyy=" 0.0002857"
-        iyz="-0.0000001"
-        izz="0.0003364" />
+        ixx="5.82412671981776E-06"
+        ixy="-2.08372416049388E-22"
+        ixz="6.37425175827703E-07"
+        iyy="5.20120101015829E-06"
+        iyz="-4.22786611841748E-22"
+        izz="5.85346314748617E-06" />
     </inertial>
     <visual>
       <origin
@@ -588,7 +694,60 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://ASK-4/meshes/RR_hip_link.STL" />
+          filename="package://ASK-4-2/meshes/RL_foot_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ASK-4-2/meshes/RL_foot_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RL_foot_joint"
+    type="fixed">
+    <origin
+      xyz="0 0 -0.21577"
+      rpy="0 0 0" />
+    <parent
+      link="RL_calf_link" />
+    <child
+      link="RL_foot_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="RR_hip_link">
+    <inertial>
+      <origin
+        xyz="0.0106669389296382 0.00105654727697253 8.09717352490136E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.337657104489195" />
+      <inertia
+        ixx="0.00033566780997577"
+        ixy="5.00830240333875E-06"
+        ixz="3.52480310375442E-07"
+        iyy="0.000441866858701045"
+        iyz="1.15542052465261E-07"
+        izz="0.000221750529456321" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ASK-4-2/meshes/RR_hip_link.STL" />
       </geometry>
       <material
         name="">
@@ -602,7 +761,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://ASK-4/meshes/RR_hip_link.STL" />
+          filename="package://ASK-4-2/meshes/RR_hip_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -628,17 +787,17 @@
     name="RR_thigh_link">
     <inertial>
       <origin
-        xyz="0.000234176514837876 0.0233673926100544 -0.031524789168861"
+        xyz="-0.000517949515534272 0.0233673926092961 -0.0285202548691598"
         rpy="0 0 0" />
       <mass
-        value=" 0.9817966 " />
+        value="0.981796539186015" />
       <inertia
-        ixx=" 0.0052284"
-        ixy=" -0.0000609"
-        ixz="-0.0006774"
-        iyy=" 0.0052866"
-        iyz="0.0002959"
-        izz="0.0012748" />
+        ixx="0.00253108517800814"
+        ixy="1.75361289018903E-07"
+        ixz="7.52244067642052E-06"
+        iyy="0.00298771577291471"
+        iyz="3.64975900668205E-06"
+        izz="0.000652694084517526" />
     </inertial>
     <visual>
       <origin
@@ -646,7 +805,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://ASK-4/meshes/RR_thigh_link.STL" />
+          filename="package://ASK-4-2/meshes/RR_thigh_link.STL" />
       </geometry>
       <material
         name="">
@@ -660,7 +819,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://ASK-4/meshes/RR_thigh_link.STL" />
+          filename="package://ASK-4-2/meshes/RR_thigh_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -669,7 +828,7 @@
     type="revolute">
     <origin
       xyz="0 -0.0975 0"
-      rpy="0 1.463 0" />
+      rpy="0 0 0" />
     <parent
       link="RR_hip_link" />
     <child
@@ -686,17 +845,17 @@
     name="RR_calf_link">
     <inertial>
       <origin
-        xyz="0.00369855429534442 1.56771086304297E-06 -0.104467716983504"
+        xyz="0.00461061447083067 1.80399490780359E-06 -0.0850112957227415"
         rpy="0 0 0" />
       <mass
-        value=" 0.2303901" />
+        value="0.196508883743766" />
       <inertia
-        ixx="0.0019440"
-        ixy="-0.0000000"
-        ixz="-0.0000000"
-        iyy="0.0018184"
-        iyz="-0.0004028"
-        izz=" 0.0001431" />
+        ixx="0.00139217885498652"
+        ixy="-2.06450991178106E-09"
+        ixz="0.000125545814906742"
+        iyy="0.00143103513123057"
+        iyz="4.12062920205897E-08"
+        izz="4.99156814648132E-05" />
     </inertial>
     <visual>
       <origin
@@ -704,12 +863,12 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://ASK-4/meshes/RR_calf_link.STL" />
+          filename="package://ASK-4-2/meshes/RR_calf_link.STL" />
       </geometry>
       <material
         name="">
         <color
-          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
       </material>
     </visual>
     <collision>
@@ -718,7 +877,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://ASK-4/meshes/RR_calf_link.STL" />
+          filename="package://ASK-4-2/meshes/RR_calf_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -727,7 +886,7 @@
     type="revolute">
     <origin
       xyz="0 0.001 -0.21"
-      rpy="3.1416 -0.38712 -3.1416" />
+      rpy="0 0 0" />
     <parent
       link="RR_thigh_link" />
     <child
@@ -739,5 +898,58 @@
       upper="3.14"
       effort="100"
       velocity="100" />
+  </joint>
+  <link
+    name="RR_foot_link">
+    <inertial>
+      <origin
+        xyz="-0.00175459486820173 0 -0.00179543551506522"
+        rpy="0 0 0" />
+      <mass
+        value="0.0332506166455944" />
+      <inertia
+        ixx="5.82412671981776E-06"
+        ixy="-1.89451746978622E-23"
+        ixz="6.37425175827702E-07"
+        iyy="5.20120101015829E-06"
+        iyz="5.69730337151966E-22"
+        izz="5.85346314748617E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ASK-4-2/meshes/RR_foot_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ASK-4-2/meshes/RR_foot_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RR_foot_joint"
+    type="fixed">
+    <origin
+      xyz="0 0 -0.21577"
+      rpy="0 0 0" />
+    <parent
+      link="RR_calf_link" />
+    <child
+      link="RR_foot_link" />
+    <axis
+      xyz="0 0 0" />
   </joint>
 </robot>
