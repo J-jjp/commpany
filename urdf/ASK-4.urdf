@@ -26,7 +26,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://ASK-4-3/meshes/base_link.STL" />
+          filename="package://urdf_tutorial/meshes/base_link.STL" />
       </geometry>
       <material
         name="">
@@ -40,7 +40,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://ASK-4-3/meshes/base_link.STL" />
+          filename="package://urdf_tutorial/meshes/base_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -66,7 +66,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://ASK-4-3/meshes/FL_hip_link.STL" />
+          filename="package://urdf_tutorial/meshes/FL_hip_link.STL" />
       </geometry>
       <material
         name="">
@@ -80,7 +80,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://ASK-4-3/meshes/FL_hip_link.STL" />
+          filename="package://urdf_tutorial/meshes/FL_hip_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -124,7 +124,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://ASK-4-3/meshes/FL_thigh_link.STL" />
+          filename="package://urdf_tutorial/meshes/FL_thigh_link.STL" />
       </geometry>
       <material
         name="">
@@ -138,7 +138,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://ASK-4-3/meshes/FL_thigh_link.STL" />
+          filename="package://urdf_tutorial/meshes/FL_thigh_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -182,7 +182,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://ASK-4-3/meshes/FL_calf_link.STL" />
+          filename="package://urdf_tutorial/meshes/FL_calf_link.STL" />
       </geometry>
       <material
         name="">
@@ -196,7 +196,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://ASK-4-3/meshes/FL_calf_link.STL" />
+          filename="package://urdf_tutorial/meshes/FL_calf_link.STL" />
       </geometry>
     </collision>
   </link>
