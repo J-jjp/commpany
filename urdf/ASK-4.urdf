@@ -4,6 +4,17 @@
      For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
 <robot
   name="ASK-4-3">
+    <mujoco>
+  <compiler 
+    meshdir="/home/pi/Downloads/LocomotionWithNP3O-master/resources/tinymal/meshes" 
+    balanceinertia="true" 
+    discardvisual="false" />
+</mujoco>
+  <link name="dummy_link"/>
+<joint name="dummy_joint" type="fixed">
+  <parent link="dummy_link"/>
+  <child link="base_link"/>
+</joint>
   <link
     name="base_link">
     <inertial>
@@ -66,7 +77,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://urdf_tutorial/meshes/FL_hip_link.STL" />
+          filename="package://urdf_tutorial/meshes/hip_link.STL" />
       </geometry>
       <material
         name="">
@@ -80,7 +91,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://urdf_tutorial/meshes/FL_hip_link.STL" />
+          filename="package://urdf_tutorial/meshes/hip_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -124,7 +135,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://urdf_tutorial/meshes/FL_thigh_link.STL" />
+          filename="package://urdf_tutorial/meshes/thigh_link.STL" />
       </geometry>
       <material
         name="">
@@ -138,7 +149,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://urdf_tutorial/meshes/FL_thigh_link.STL" />
+          filename="package://urdf_tutorial/meshes/thigh_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -182,7 +193,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://urdf_tutorial/meshes/FL_calf_link.STL" />
+          filename="package://urdf_tutorial/meshes/calf_link.STL" />
       </geometry>
       <material
         name="">
@@ -196,7 +207,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://urdf_tutorial/meshes/FL_calf_link.STL" />
+          filename="package://urdf_tutorial/meshes/calf_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -240,7 +251,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://ASK-4-3/meshes/FL_foot_link.STL" />
+          filename="package://urdf_tutorial/meshes/foot_link.STL" />
       </geometry>
       <material
         name="">
@@ -254,7 +265,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://ASK-4-3/meshes/FL_foot_link.STL" />
+          filename="package://urdf_tutorial/meshes/foot_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -293,7 +304,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://ASK-4-3/meshes/FR_hip_link.STL" />
+          filename="package://urdf_tutorial/meshes/R_hip_link.STL" />
       </geometry>
       <material
         name="">
@@ -307,7 +318,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://ASK-4-3/meshes/FR_hip_link.STL" />
+          filename="package://urdf_tutorial/meshes/R_hip_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -351,7 +362,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://ASK-4-3/meshes/FR_thigh_link.STL" />
+          filename="package://urdf_tutorial/meshes/R_thigh_link.STL" />
       </geometry>
       <material
         name="">
@@ -365,7 +376,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://ASK-4-3/meshes/FR_thigh_link.STL" />
+          filename="package://urdf_tutorial/meshes/R_thigh_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -409,7 +420,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://ASK-4-3/meshes/FR_calf_link.STL" />
+          filename="package://urdf_tutorial/meshes/calf_link.STL" />
       </geometry>
       <material
         name="">
@@ -423,7 +434,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://ASK-4-3/meshes/FR_calf_link.STL" />
+          filename="package://urdf_tutorial/meshes/calf_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -467,7 +478,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://ASK-4-3/meshes/FR_foot_link.STL" />
+          filename="package://urdf_tutorial/meshes/foot_link.STL" />
       </geometry>
       <material
         name="">
@@ -481,7 +492,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://ASK-4-3/meshes/FR_foot_link.STL" />
+          filename="package://urdf_tutorial/meshes/foot_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -520,7 +531,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://ASK-4-10/meshes/RL_hip_link.STL" />
+          filename="package://urdf_tutorial/meshes/hip_link.STL" />
       </geometry>
       <material
         name="">
@@ -534,7 +545,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://ASK-4-10/meshes/RL_hip_link.STL" />
+          filename="package://urdf_tutorial/meshes/hip_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -578,7 +589,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://ASK-4-10/meshes/RL_thigh_link.STL" />
+          filename="package://urdf_tutorial/meshes/thigh_link.STL" />
       </geometry>
       <material
         name="">
@@ -592,7 +603,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://ASK-4-10/meshes/RL_thigh_link.STL" />
+          filename="package://urdf_tutorial/meshes/thigh_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -636,7 +647,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://ASK-4-10/meshes/RL_calf_link.STL" />
+          filename="package://urdf_tutorial/meshes/calf_link.STL" />
       </geometry>
       <material
         name="">
@@ -650,7 +661,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://ASK-4-10/meshes/RL_calf_link.STL" />
+          filename="package://urdf_tutorial/meshes/calf_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -694,7 +705,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://ASK-4-10/meshes/RL_foot_link.STL" />
+          filename="package://urdf_tutorial/meshes/foot_link.STL" />
       </geometry>
       <material
         name="">
@@ -708,7 +719,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://ASK-4-10/meshes/RL_foot_link.STL" />
+          filename="package://urdf_tutorial/meshes/foot_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -747,7 +758,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://ASK-4-3/meshes/RR_hip_link.STL" />
+          filename="package://urdf_tutorial/meshes/R_hip_link.STL" />
       </geometry>
       <material
         name="">
@@ -761,7 +772,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://ASK-4-3/meshes/RR_hip_link.STL" />
+          filename="package://urdf_tutorial/meshes/R_hip_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -805,7 +816,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://ASK-4-3/meshes/RR_thigh_link.STL" />
+          filename="package://urdf_tutorial/meshes/R_thigh_link.STL" />
       </geometry>
       <material
         name="">
@@ -819,7 +830,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://ASK-4-3/meshes/RR_thigh_link.STL" />
+          filename="package://urdf_tutorial/meshes/R_thigh_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -863,7 +874,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://ASK-4-3/meshes/RR_calf_link.STL" />
+          filename="package://urdf_tutorial/meshes/calf_link.STL" />
       </geometry>
       <material
         name="">
@@ -877,7 +888,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://ASK-4-3/meshes/RR_calf_link.STL" />
+          filename="package://urdf_tutorial/meshes/calf_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -921,7 +932,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://ASK-4-3/meshes/RR_foot_link.STL" />
+          filename="package://urdf_tutorial/meshes/foot_link.STL" />
       </geometry>
       <material
         name="">
@@ -935,7 +946,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://ASK-4-3/meshes/RR_foot_link.STL" />
+          filename="package://urdf_tutorial/meshes/foot_link.STL" />
       </geometry>
     </collision>
   </link>
