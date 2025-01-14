@@ -6,7 +6,7 @@
   name="ASK-4-3">
     <mujoco>
   <compiler 
-    meshdir="/home/pi/Downloads/LocomotionWithNP3O-master/resources/tinymal/meshes" 
+    meshdir="/home/jiaojunpeng/my_dog/commpany/meshes/" 
     balanceinertia="true" 
     discardvisual="false" />
 </mujoco>
@@ -50,8 +50,7 @@
         xyz="0 0 0"
         rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="package://urdf_tutorial/meshes/base_link.STL" />
+        <box size="0.306 0.22 0.14"/>
       </geometry>
     </collision>
   </link>
@@ -88,10 +87,9 @@
     <collision>
       <origin
         xyz="0 0 0"
-        rpy="0 0 0" />
+        rpy="1.5708 0 0" />
       <geometry>
-        <mesh
-          filename="package://urdf_tutorial/meshes/hip_link.STL" />
+        <cylinder length="0.082" radius="0.05" />
       </geometry>
     </collision>
   </link>
@@ -145,11 +143,10 @@
     </visual>
     <collision>
       <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
+        xyz="0 0 -0.08"
+        rpy="0 1.5708 0" />
       <geometry>
-        <mesh
-          filename="package://urdf_tutorial/meshes/thigh_link.STL" />
+        <box size="0.18 0.0278 0.034"/>
       </geometry>
     </collision>
   </link>
@@ -203,11 +200,10 @@
     </visual>
     <collision>
       <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
+        xyz="0 0 -0.08"
+        rpy="0 1.5708 0" />
       <geometry>
-        <mesh
-          filename="package://urdf_tutorial/meshes/calf_link.STL" />
+        <box size="0.21 0.013 0.0252"/>
       </geometry>
     </collision>
   </link>
@@ -215,7 +211,7 @@
     name="FL_calf_joint"
     type="revolute">
     <origin
-      xyz="0 -0.001 -0.21"
+      xyz="0 0 -0.21"
       rpy="0 0 0" />
     <parent
       link="FL_thigh_link" />
@@ -264,8 +260,7 @@
         xyz="0 0 0"
         rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="package://urdf_tutorial/meshes/foot_link.STL" />
+        <sphere radius="0.021"/>
       </geometry>
     </collision>
   </link>
@@ -286,7 +281,7 @@
     name="FR_hip_link">
     <inertial>
       <origin
-        xyz="-0.0106669389296382 0.00105654727697248 -8.09717352481809E-06"
+        xyz="0 0 -8.09717352481809E-06"
         rpy="0 0 0" />
       <mass
         value="0.337657104489193" />
@@ -315,10 +310,9 @@
     <collision>
       <origin
         xyz="0 0 0"
-        rpy="0 0 0" />
+        rpy="1.5708 0 0" />
       <geometry>
-        <mesh
-          filename="package://urdf_tutorial/meshes/R_hip_link.STL" />
+        <cylinder length="0.082" radius="0.05" />
       </geometry>
     </collision>
   </link>
@@ -372,11 +366,10 @@
     </visual>
     <collision>
       <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
+        xyz="0 0 -0.08"
+        rpy="0 1.5708 0" />
       <geometry>
-        <mesh
-          filename="package://urdf_tutorial/meshes/R_thigh_link.STL" />
+        <box size="0.18 0.0278 0.034"/>
       </geometry>
     </collision>
   </link>
@@ -430,11 +423,10 @@
     </visual>
     <collision>
       <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
+        xyz="0 0 -0.08"
+        rpy="0 1.5708 0" />
       <geometry>
-        <mesh
-          filename="package://urdf_tutorial/meshes/calf_link.STL" />
+        <box size="0.21 0.013 0.0252"/>
       </geometry>
     </collision>
   </link>
@@ -442,7 +434,7 @@
     name="FR_calf_joint"
     type="revolute">
     <origin
-      xyz="0 0.001 -0.21"
+      xyz="0 0.00 -0.21"
       rpy="0 0 0" />
     <parent
       link="FR_thigh_link" />
@@ -491,8 +483,7 @@
         xyz="0 0 0"
         rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="package://urdf_tutorial/meshes/foot_link.STL" />
+        <sphere radius="0.021"/>
       </geometry>
     </collision>
   </link>
@@ -542,10 +533,9 @@
     <collision>
       <origin
         xyz="0 0 0"
-        rpy="0 0 0" />
+        rpy="1.5708 0 0" />
       <geometry>
-        <mesh
-          filename="package://urdf_tutorial/meshes/hip_link.STL" />
+        <cylinder length="0.082" radius="0.05" />
       </geometry>
     </collision>
   </link>
@@ -553,7 +543,7 @@
     name="RL_hip_joint"
     type="revolute">
     <origin
-      xyz="-0.212 0.0575000000000033 0"
+      xyz="-0.212 0.0575 0"
       rpy="0 0 0" />
     <parent
       link="base_link" />
@@ -599,11 +589,10 @@
     </visual>
     <collision>
       <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
+        xyz="0 0 -0.08"
+        rpy="0 1.5708 0" />
       <geometry>
-        <mesh
-          filename="package://urdf_tutorial/meshes/thigh_link.STL" />
+        <box size="0.18 0.0278 0.034"/>
       </geometry>
     </collision>
   </link>
@@ -612,7 +601,7 @@
     type="revolute">
     <origin
       xyz="0 0.0974999999999997 0"
-      rpy="0 -0.0393393013816893 0" />
+      rpy="0 0 0" />
     <parent
       link="RL_hip_link" />
     <child
@@ -620,10 +609,10 @@
     <axis
       xyz="0 1 0" />
     <limit
-      lower="0"
-      upper="0"
-      effort="0"
-      velocity="0" />
+      lower="3.14"
+      upper="-3.14"
+      effort="100"
+      velocity="100" />
   </joint>
   <link
     name="RL_calf_link">
@@ -657,11 +646,10 @@
     </visual>
     <collision>
       <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
+        xyz="0 0 -0.08"
+        rpy="0 1.5708 0" />
       <geometry>
-        <mesh
-          filename="package://urdf_tutorial/meshes/calf_link.STL" />
+        <box size="0.21 0.013 0.0252"/>
       </geometry>
     </collision>
   </link>
@@ -669,8 +657,8 @@
     name="RL_calf_joint"
     type="revolute">
     <origin
-      xyz="-0.00825912262911466 -0.00100000000000011 -0.209837524988717"
-      rpy="0 0.0393393013816893 0" />
+      xyz="0 0 -0.209837524988717"
+      rpy="0 0 0" />
     <parent
       link="RL_thigh_link" />
     <child
@@ -678,10 +666,10 @@
     <axis
       xyz="0 1 0" />
     <limit
-      lower="0"
-      upper="0"
-      effort="0"
-      velocity="0" />
+      lower="-3.14"
+      upper="3.14"
+      effort="100"
+      velocity="100" />
   </joint>
   <link
     name="RL_foot_link">
@@ -718,8 +706,7 @@
         xyz="0 0 0"
         rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="package://urdf_tutorial/meshes/foot_link.STL" />
+        <sphere radius="0.021"/>
       </geometry>
     </collision>
   </link>
@@ -769,10 +756,9 @@
     <collision>
       <origin
         xyz="0 0 0"
-        rpy="0 0 0" />
+        rpy="1.5708 0 0" />
       <geometry>
-        <mesh
-          filename="package://urdf_tutorial/meshes/R_hip_link.STL" />
+        <cylinder length="0.082" radius="0.05" />
       </geometry>
     </collision>
   </link>
@@ -780,7 +766,7 @@
     name="RR_hip_joint"
     type="revolute">
     <origin
-      xyz="-0.212000000000005 -0.057499999999997 0"
+      xyz="-0.212000000000005 -0.0575 0"
       rpy="0 0 0" />
     <parent
       link="base_link" />
@@ -826,11 +812,10 @@
     </visual>
     <collision>
       <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
+        xyz="0 0 -0.08"
+        rpy="0 1.5708 0" />
       <geometry>
-        <mesh
-          filename="package://urdf_tutorial/meshes/R_thigh_link.STL" />
+        <box size="0.18 0.0278 0.034"/>
       </geometry>
     </collision>
   </link>
@@ -884,11 +869,10 @@
     </visual>
     <collision>
       <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
+        xyz="0 0 -0.08"
+        rpy="0 1.5708 0" />
       <geometry>
-        <mesh
-          filename="package://urdf_tutorial/meshes/calf_link.STL" />
+        <box size="0.21 0.013 0.0252"/>
       </geometry>
     </collision>
   </link>
@@ -896,7 +880,7 @@
     name="RR_calf_joint"
     type="revolute">
     <origin
-      xyz="0 0.001 -0.21"
+      xyz="0 0.00 -0.21"
       rpy="0 0 0" />
     <parent
       link="RR_thigh_link" />
@@ -945,8 +929,7 @@
         xyz="0 0 0"
         rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="package://urdf_tutorial/meshes/foot_link.STL" />
+        <sphere radius="0.021"/>
       </geometry>
     </collision>
   </link>
