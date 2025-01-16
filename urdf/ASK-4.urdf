@@ -218,7 +218,7 @@
     <child
       link="FL_calf_link" />
     <axis
-      xyz="0 -1 0" />
+      xyz="0 1 0" />
     <limit
       lower="-3.14"
       upper="3.14"
@@ -384,7 +384,7 @@
     <child
       link="FR_thigh_link" />
     <axis
-      xyz="0 -1 0" />
+      xyz="0 1 0" />
     <limit
       lower="-3.14"
       upper="3.14"
@@ -441,7 +441,7 @@
     <child
       link="FR_calf_link" />
     <axis
-      xyz="0 -1 0" />
+      xyz="0 1 0" />
     <limit
       lower="-3.14"
       upper="3.14"
@@ -590,7 +590,7 @@
     <collision>
       <origin
         xyz="0 0 -0.08"
-        rpy="0 1.5708 0" />
+        rpy="0 -1.5708 0" />
       <geometry>
         <box size="0.18 0.0278 0.034"/>
       </geometry>
@@ -600,7 +600,7 @@
     name="RL_thigh_joint"
     type="revolute">
     <origin
-      xyz="0 0.0974999999999997 0"
+      xyz="0 0.0975 0"
       rpy="0 0 0" />
     <parent
       link="RL_hip_link" />
@@ -609,8 +609,8 @@
     <axis
       xyz="0 1 0" />
     <limit
-      lower="3.14"
-      upper="-3.14"
+      lower="-3.14"
+      upper="3.14"
       effort="100"
       velocity="100" />
   </joint>
@@ -830,7 +830,7 @@
     <child
       link="RR_thigh_link" />
     <axis
-      xyz="0 -1 0" />
+      xyz="0 1 0" />
     <limit
       lower="-3.14"
       upper="3.14"
@@ -887,7 +887,7 @@
     <child
       link="RR_calf_link" />
     <axis
-      xyz="0 -1 0" />
+      xyz="0 1 0" />
     <limit
       lower="-3.14"
       upper="3.14"
